@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a **mobile-based attendance system** for dairy farms to track milk delivery to subscribed households using  **QR code scanning** . It helps delivery staff mark attendance easily via a  **Progressive Web App (PWA) or a Native Mobile App** , eliminating manual record-keeping and reducing errors.
+This project is a **mobile-based attendance system** for dairy farms to track milk delivery to subscribed households using **QR code scanning**. It helps delivery staff mark attendance easily via a **Progressive Web App (PWA) or a Native Mobile App**, eliminating manual record-keeping and reducing errors.
 
 ## Features
 
@@ -10,7 +10,7 @@ This project is a **mobile-based attendance system** for dairy farms to track mi
 
 ✅ **Mobile App for Delivery Staff (PWA or Native)**
 
-✅ **Google Sheets as a Free Database**
+✅ **Google Sheets as a Free Database (Initial MVP)**
 
 ✅ **Offline Mode (Syncs Later When Online)**
 
@@ -18,12 +18,19 @@ This project is a **mobile-based attendance system** for dairy farms to track mi
 
 ✅ **Push Notifications for Skipped Deliveries (Future Feature)**
 
+✅ **GPS Tracking & Time Logs for Fraud Prevention**
+
+✅ **Multilingual UI for Ease of Use**
+
+✅ **Potential AI-powered Image Verification for Authenticity**
+
 ## Workflow
 
-1. **Customer Gets a QR Code** : A unique QR code is placed at each house.
-2. **Delivery Staff Scans QR Code** : Using the mobile app, the staff scans the QR code.
-3. **Attendance is Logged in Google Sheets** : The app updates delivery status automatically.
-4. **Admin Views Reports** : Attendance logs are analyzed for delivery trends & billing.
+1. **Customer Gets a QR Code**: A unique QR code is placed at each house.
+2. **Delivery Staff Scans QR Code**: Using the mobile app, the staff scans the QR code.
+3. **Attendance is Logged in Google Sheets**: The app updates delivery status automatically.
+4. **Admin Views Reports**: Attendance logs are analyzed for delivery trends & billing.
+5. **GPS Location & Timestamp is Stored**: Ensures delivery legitimacy and prevents fraud.
 
 ## Technology Stack
 
@@ -40,8 +47,9 @@ This project is a **mobile-based attendance system** for dairy farms to track mi
 * **Frontend:** React Native / Flutter
 * **QR Scanner:** `react-native-qrcode-scanner`
 * **Backend:** Google Firebase Functions (Real-time updates)
-* **Database:** Google Sheets initially, then Firestore/PostgreSQL
+* **Database:** Supabase / Firebase Firestore / PostgreSQL
 * **Offline Mode:** Stores data locally when the network is unavailable
+* **Push Notifications:** Firebase Cloud Messaging (FCM)
 
 ## Setup Instructions
 
@@ -59,6 +67,8 @@ This project is a **mobile-based attendance system** for dairy farms to track mi
   * `Address`
   * `Subscription Type`
   * `Attendance Logs`
+  * `GPS Location`
+  * `Timestamp`
 * Enable **Google Sheets API** for read/write access.
 
 ### **3. Deploy the Web App (PWA)**
@@ -75,15 +85,24 @@ This project is a **mobile-based attendance system** for dairy farms to track mi
 ### **4. Future Upgrade: Native Mobile App**
 
 * Build with React Native or Flutter for Android/iOS.
-* Implement **Offline Sync** and  **Push Notifications** .
-* Transition from Google Sheets to a scalable database like Firebase Firestore.
+* Implement **Offline Sync** and **Push Notifications**.
+* Transition from Google Sheets to a scalable database like Firebase Firestore or Supabase.
 
 ## Future Enhancements
 
 * **AI-powered Demand Forecasting**
 * **Customer Dashboard for Delivery History**
 * **Automated Monthly Billing System**
+* **Fraud Prevention via Image Verification**
+* **Advanced Analytics & Insights for Dairy Farms**
+
+## Business Model (Optional for Monetization)
+
+* **Freemium Model:** Basic features free, premium analytics & automation paid.
+* **Subscription-Based Model:** Monthly pricing for advanced tracking & billing.
+* **White-Label Solution:** Custom version for dairy farms as a SaaS.
 
 ## License
 
 This project is open-source and free to use. Contributions are welcome!
+
