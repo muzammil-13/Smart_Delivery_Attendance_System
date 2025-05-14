@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { becknService } from '../services/becknService';
-import './BecknServiceDiscovery.css';
+import { becknService } from 'daiy-farm-pwa/src/services/becknServices.js';
+import 'daiy-farm-pwa/src/components/BecknServiceDiscovery.css';
 
 const BecknServiceDiscovery = () => {
   const [services, setServices] = useState([]);
